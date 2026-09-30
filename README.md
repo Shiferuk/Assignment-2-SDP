@@ -22,9 +22,9 @@
 Assignment2/
 │
 ├── src/
-│   ├── Main.java                     <-- Configures and runs the app
+│   ├── Main.java
 │   │
-│   ├── model/                        <-- PRODUCT INTERFACE & CONCRETES
+│   ├── model/
 │   │   ├── Linux/
 │   │   │   ├── GtkButton.java
 │   │   │   ├── GtkCheckbox.java
@@ -41,7 +41,8 @@ Assignment2/
 │   │   ├── Checkbox.java
 │   │   └── TextField.java
 │   │
-│   └── app/                          <-- CREATOR & BUSINESS LOGIC
+│   └── app/
+│       ├── FactoryProvider.java
 │       ├── FormRenderer.java
 │       ├── SystemFactory.java
 │       ├── WindowsFactory.java

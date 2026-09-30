@@ -1,18 +1,24 @@
-import app.*;
+import app.FactoryProvider;
+import app.FormRenderer;
+import app.SystemFactory;
 
 public class Main {
+
     public static void main(String[] args) {
-        String osType = "Mac";
+        String family;
 
-        SystemFactory factory;
-
-        if (osType.equalsIgnoreCase("Windows")) {
-            factory = new WindowsFactory();
-        } else if (osType.equalsIgnoreCase("Gtk")) {
-            factory = new GtkFactory();
+        if (args.length > 0) {
+            family = args[0];
         } else {
-            factory = new MacFactory();
+
+            family = System.getenv("APP_FAMILY");
         }
+
+        if (family == null || family.isBlank()) {
+            family = "Mac";
+        }
+
+        SystemFactory factory = FactoryProvider.createFactory(family);
 
         FormRenderer renderer = new FormRenderer(factory);
         renderer.displayForm();

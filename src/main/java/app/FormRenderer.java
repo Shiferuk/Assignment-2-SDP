@@ -1,8 +1,11 @@
 package app;
 
-import model.*;
+import model.Button;
+import model.Checkbox;
+import model.TextField;
 
 public class FormRenderer {
+
     private final SystemFactory factory;
 
     public FormRenderer(SystemFactory factory) {
@@ -10,6 +13,7 @@ public class FormRenderer {
     }
 
     public void displayForm() {
+
         System.out.println("========================================");
         System.out.println("App: Initializing OS-native form window...");
 
@@ -20,9 +24,11 @@ public class FormRenderer {
         nameField.render();
         termsCheckbox.render();
         submitButton.render();
+
         System.out.println("App: Form successfully rendered on screen.");
 
         System.out.println("\n[User interaction simulated]");
+
         nameField.type("Jane Doe");
         termsCheckbox.toggle();
         submitButton.click();

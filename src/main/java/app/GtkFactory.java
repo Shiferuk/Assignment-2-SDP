@@ -1,11 +1,14 @@
 package app;
 
-import model.*;
+import model.Button;
+import model.Checkbox;
+import model.TextField;
 import model.Linux.GtkButton;
 import model.Linux.GtkCheckbox;
 import model.Linux.GtkTextField;
 
 public class GtkFactory implements SystemFactory {
+
     @Override
     public Button createButton() {
         return new GtkButton();

@@ -1,14 +1,9 @@
 package app;
 
-import model.Button;
-import model.Checkbox;
-import model.TextField;
+import model.*;
 
 public interface SystemFactory {
-
     Button createButton();
-
     Checkbox createCheckbox();
-
     TextField createTextField();
 }

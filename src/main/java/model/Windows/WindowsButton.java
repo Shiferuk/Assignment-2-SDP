@@ -1,14 +1,13 @@
 package model.Windows;
 
-import model.Button;
+import model.*;
 
 public class WindowsButton implements Button {
-    @Override
-    public void render() {
-        System.out.println("[Windows] Rendering sharp rectangular button.");
-    }
-    @Override
-    public void click() {
-        System.out.println("[Windows] Windows button clicked!");
+    public void render() { System.out.println("[Windows] Rendering sharp rectangular button."); }
+    public void click() { System.out.println("[Windows] Windows button clicked!"); }
+    public void submit(TextField field, Checkbox checkbox) {
+        System.out.println("[Windows] Submitting '" + field.getText() + "' with consent=" + checkbox.isChecked());
+        click();
+        System.out.println("[Windows] Business operation completed.");
     }
 }
